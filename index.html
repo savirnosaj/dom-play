@@ -1,1 +1,67 @@
-<h1>Dom Play</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dom Play</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="box">
+                <h1>Lost in Conversation</h1>
+                <h3>Autor: Omar Merza</h3>
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione voluptates inventore esse blanditiis ipsum at asperiores, ex molestias quod maiores molestiae sapiente magni dolores doloribus. Qui modi odio provident."</p>            </div>
+        </header>
+        <div class="container">
+            <div id="play">
+                <h2>Click the button to display first text:</h2>
+                <button style="margin: 0 auto;"><span data-actor="Man">Start</span></button>
+                <p>Woman: <span data-actor="Woman">I’ve been thinking lately.</span></p>
+                <p>Man: <span data-actor="Man">About?</span></p>
+                <p>Woman: <span data-actor="Woman">A lot of things. And very few things. Does that make sense?</span></p>
+                <p>Man: <span data-actor="Man">It does to me.</span></p>
+                <p>She smiles.</p>
+                <p>Woman: <span data-actor="Woman">I thought it might.</span></p>
+                <p>Man: <span data-actor="Man">I wonder if this is what we’re looking for, understanding.</span></p>
+                <p>Man: <span data-actor="Man">It’s our first time out alone. I knew her friends, she knew mine. Every now and then we’d bump into each other and exchange small talk.</span></p>
+                <p>Man: <span data-actor="Man">Hows your day? Hows work? What have you been up to? Anything new?</span></p>
+                <p>Man: <span data-actor="Man">We spoke, but never really said anything.</span></p>
+                <p>Man: <span data-actor="Man">Still, I was drawn to her.</span></p>
+                <p>Man: <span data-actor="Man">I knew she had more to say.</span></p>
+                <p>Man:With some people you just know.</p>
+                <p>Man: <span data-actor="Man">“So what’s something you’ve been thinking about?”</span></p>
+                <p>She shuffles through her thoughts, trying to find the right topic.</p>
+                <p>Woman: <span data-actor="Woman">“Buildings.”</span></p>
+            </div>
+            <footer>
+                <h3><a href="https://medium.com/the-coffeelicious/lost-in-conversation-596d1a826429">Link to offical script</a></h3>
+            </footer>
+        </div>
+        
+        <script>
+            const spans = document.querySelectorAll('#play span');
+
+            for(const mySpan of spans){
+                mySpan.addEventListener('click', function(ev){
+                    //alert(mySpan.dataset.actor);
+                    highlightActor(mySpan.dataset.actor);
+                });
+            }
+
+            function highlightActor(playActor){
+
+                for(const mySpan of spans){
+                    if(playActor == mySpan.dataset.actor){
+                        mySpan.style.backgroundColor = 'orange';
+                    }
+                    else{
+                        mySpan.style.backgroundColor = 'brown'
+                        mySpan.style.opacity = 1;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

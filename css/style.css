@@ -1,0 +1,57 @@
+header {
+    background: orange;
+    height: 650px;
+    text-align: center;
+    position: relative;
+}
+.box {
+    top: 150px;
+    position: relative;
+    width: 65%;
+    margin: 0 auto;
+}
+header h1 {
+    color: #fff;
+}
+header h3 {
+    color: #fff;
+}
+header p {
+    font-size: 35px;
+    color: #fff;
+}
+.container {
+    background-image: url("../img/couple-photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#play {
+    margin: 0 auto;
+    width: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+#play span {
+    /* background-color: orange; */
+    opacity: 0;
+}
+#play h2 {
+    color: #fff;
+    text-align: center;
+}
+#play p {
+    font-size: 26px;
+    color: #fff;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: orange;
+}
+footer h3 a {
+    color: #fff;
+    text-decoration: none;
+}
+footer h3 a:hover {
+    color: blue;
+}
